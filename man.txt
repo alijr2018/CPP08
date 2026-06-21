@@ -1,0 +1,125 @@
+ how standard containers behave..
+
+If by "standard containers" you mean the common containers in a programming language's standard library (such as C++ STL containers), they generally behave according to their underlying data structure:
+
+Sequence containers (e.g., vector, list, deque)
+Store elements in a specific order.
+Allow iteration from beginning to end.
+Differ in how
+ how standard containers behave. in c++ 98
+
+In C++98, “standard containers” (from the STL, part of <vector>, <list>, <map>, etc.) follow fairly strict and well-defined behavioral rules. The most important idea is: each container has predictable complexity, iterator behavior, and storage rules, but differs based on its internal data structure.
+
+Here’s a clear breakdown of how they behave in C++98:
+
+1. General behavior (all standard containers)
+
+All STL containers in C++98:
+
+Manage memory automatically (no manual new/delete needed)
+Store copies of elements (no references inside containers)
+Provide iterators for traversal
+Support:
+begin(), end()
+size(), empty()
+insert(), erase() (with differences per container)
+Require:
+Elements must be copyable and assignable
+Keys must be comparable for ordered containers
+2. Sequence containers (ordered by position)
+🟦 vector
+Dynamic array (contiguous memory)
+Fast random access: O(1)
+Slow insert/erase in middle: O(n)
+Fast push_back (amortized O(1))
+
+Iterator behavior:
+
+Insertion/resize may invalidate all iterators
+🟦 deque
+Double-ended queue (segmented memory)
+Fast insert/remove at both ends: O(1)
+Random access: O(1) (slightly slower than vector)
+
+Iterator behavior:
+
+Insert/erase may invalidate iterators, but usually less aggressively than vector
+🟦 list
+Doubly linked list
+Fast insert/erase anywhere: O(1)
+No random access (must traverse)
+
+Iterator behavior:
+
+Insert/erase does NOT invalidate other iterators (very stable)
+3. Associative containers (sorted by key)
+🟩 set, multiset
+Balanced tree (typically Red-Black tree)
+Elements are always sorted
+set: unique keys
+multiset: duplicate keys allowed
+
+Operations:
+
+insert/find/erase: O(log n)
+
+Iterator behavior:
+
+Very stable: insert/delete does not invalidate other iterators (except erased ones)
+🟩 map, multimap
+Same structure as set, but store key-value pairs
+map: unique keys
+multimap: duplicate keys allowed
+
+Example:
+
+map<int, string>
+
+Behavior:
+
+Keys are sorted
+Lookup by key is O(log n)
+4. Container adaptors (restricted interfaces)
+🟨 stack
+LIFO (last in, first out)
+Usually built on deque or vector
+No iterators
+
+Operations:
+
+push, pop, top
+🟨 queue
+FIFO (first in, first out)
+Usually based on deque
+No iterators
+🟨 priority_queue
+Heap-based structure
+Always gives largest (or custom comparator) element first
+No iteration
+5. Iterator invalidation rules (VERY IMPORTANT in C++98)
+Container	What invalidates iterators?
+vector	Reallocation, insert/erase in middle
+deque	Insert/erase (some cases partial invalidation)
+list	Only erased elements
+map/set	Only erased elements
+6. Big design idea in C++98 STL
+Containers are not uniform internally
+Performance guarantees depend on structure:
+arrays → vector
+linked list → list
+trees → map/set
+hash tables → ❌ not in C++98 (no unordered_* yet)
+7. Key takeaway
+
+In C++98, standard containers behave like:
+
+vector = fast array
+list = stable linked chain
+map/set = sorted tree structure
+stack/queue = restricted interfaces over other containers
+
+If you want, I can also explain:
+
+iterator invalidation tricks for exams
+time complexity table (very common interview question)
+or differences between C++98 vs modern C++11 containers
