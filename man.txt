@@ -3,6 +3,14 @@ access, and manipulate data. how standard containers behave..
 
 If by "standard containers" you mean the common containers in a programming language's standard library (such as C++ STL containers), they generally behave according to their underlying data structure:
 
+STL (Standard Template Library) in C++98 is a library of generic classes and functions that provides reusable data structures and algorithms.
+
+The STL has three main components:
+
+Containers – store data (vector, list, map, set, deque, etc.)
+Algorithms – perform operations on data (sort, find, copy, etc.)
+Iterators – act like pointers to traverse containers.
+
 Sequence containers (e.g., vector, list, deque)
 Store elements in a specific order.
 Allow iteration from beginning to end.
