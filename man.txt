@@ -1,4 +1,5 @@
- how standard containers behave..
+In C++98, a container is an object that stores and organizes a collection of other objects (called elements). Containers are part of the Standard Template Library (STL) and provide standardized ways to store, 
+access, and manipulate data. how standard containers behave..
 
 If by "standard containers" you mean the common containers in a programming language's standard library (such as C++ STL containers), they generally behave according to their underlying data structure:
 
@@ -8,7 +9,8 @@ Allow iteration from beginning to end.
 Differ in how
  how standard containers behave. in c++ 98
 
-In C++98, “standard containers” (from the STL, part of <vector>, <list>, <map>, etc.) follow fairly strict and well-defined behavioral rules. The most important idea is: each container has predictable complexity, iterator behavior, and storage rules, but differs based on its internal data structure.
+In C++98, “standard containers” (from the STL, part of <vector>, <list>, <map>, etc.) follow fairly strict and well-defined behavioral rules. 
+The most important idea is: each container has predictable complexity, iterator behavior, and storage rules, but differs based on its internal data structure.
 
 Here’s a clear breakdown of how they behave in C++98:
 
