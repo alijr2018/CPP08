@@ -1,6 +1,6 @@
 #ifndef EASYFIND_HPP
 #define EASYFIND_HPP
-
+#include <iostream>
 // #include <exception>
 #include <algorithm>
 
@@ -23,12 +23,23 @@ template <typename T>
 typename T::iterator easyfind(T &a, int b)
 {
     typename T::iterator tmp = std::find(a.begin(), a.end(), b); //search more about this typename
-    if (tmp != a.end())
+    if (tmp != a.end()) {
         return tmp;
+    }
     // throw ex::Not(); // changed later to a return 
     return a.end();
 }
 
+// template <typename T>
+// typename T::const_iterator easyfind(T &a, int b)
+// {
+//     typename T::const_iterator tmp = std::find(a.begin(), a.end(), b); //search more about this typename
+//     if (tmp != a.end()) {
+//         return tmp;
+//     }
+//     // throw ex::Not(); // changed later to a return 
+//     return a.end();
+// }
 #endif
 
 
