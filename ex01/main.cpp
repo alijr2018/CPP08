@@ -6,9 +6,9 @@ int main()
     // sp.addNumber(rand());
     // sleep(1);
     // sp.addNumber(rand());
-    for (size_t i = 0; i < 100000; i++)
+    for (size_t i = 0; i < 100; i++)
     {
-        sp.addNumber(rand() -546);
+        sp.addNumber(rand());
         usleep(1);
     }
     // sp.addNumber(17);

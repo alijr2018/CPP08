@@ -22,24 +22,24 @@
 template <typename T>
 typename T::iterator easyfind(T &a, int b)
 {
-    typename T::iterator tmp = std::find(a.begin(), a.end(), b); //search more about this typename
-    if (tmp != a.end()) {
-        return tmp;
-    }
+    // typename T::iterator tmp = std::find(a.begin(), a.end(), b); //search more about this typename
+    // if (tmp != a.end()) {
+        // return tmp;
+    // }
     // throw ex::Not(); // changed later to a return 
-    return a.end();
+    return std::find(a.begin(), a.end(), b);
 }
 
-template <typename T>
-typename T::const_iterator easyfind(const T &a, int b)
-{
-    typename T::const_iterator tmp = std::find(a.begin(), a.end(), b); //search more about this typename
-    if (tmp != a.end()) {
-        return tmp;
-    }
-    // throw ex::Not(); // changed later to a return 
-    return a.end();
-}
+// template <typename T>
+// typename T::const_iterator easyfind(const T &a, int b)
+// {
+//     typename T::const_iterator tmp = std::find(a.begin(), a.end(), b); //search more about this typename
+//     if (tmp != a.end()) {
+//         return tmp;
+//     }
+//     // throw ex::Not(); // changed later to a return 
+//     return a.end();
+// }
 #endif
 
 

@@ -13,7 +13,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp MutantStack.hpp
+%.o: %.cpp MutantStack.hpp MutantStack.tpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

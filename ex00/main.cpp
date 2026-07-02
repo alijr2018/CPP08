@@ -33,7 +33,12 @@ int main()
 
     std::vector<int>::iterator it;
     std::list<int>::iterator it1;
-    it = easyfind(v, 4);
-    ++it;
+    it = easyfind(v, 1000);
+    if (it == v.end())
+    {
+        std::cout << "Error Not found\n";
+        return 1;
+    }
+    // ++it;
     std::cout << *it << std::endl;
 }

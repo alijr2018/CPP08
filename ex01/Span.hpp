@@ -35,7 +35,7 @@ class Span
             // for(size_t i = 0; i < a.size(); i++)
             //     printf("%d\n",a[i]);
             // printf("------------\n");
-            int count = 0;
+            unsigned int count = 0;
             for (size_t i = 0; i <= a.size();i++)
             {
                 for (size_t j = i+1; j <= a.size() -1; j++)
@@ -65,8 +65,8 @@ class Span
             // for(size_t i = 0; i < a.size(); i++)
                 // printf("%d\n",a[i]);
             // printf("------------\n");
-            int count = 0;
-            int tmp = INT_MAX;
+            unsigned int count = 0;
+            unsigned int tmp = UINT_MAX;
 
             for (size_t i = 0; i <= a.size();i++)
             {
