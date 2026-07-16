@@ -1,55 +1,22 @@
 #ifndef EASYFIND_HPP
 #define EASYFIND_HPP
+
 #include <iostream>
-// #include <exception>
 #include <algorithm>
+#include <vector>
 
-// class ex : public std::exception
-// {
-//     public:
-//         class Not : public std::exception
-//         {
-//             public:
-//                 const char* what() const throw()
-//                 {
-//                     return ("Not found");
-//                 }
-//         };
-// };
-
-
-// template <typename T>
 template <typename T>
 typename T::iterator easyfind(T &a, int b)
 {
-    // typename T::iterator tmp = std::find(a.begin(), a.end(), b); //search more about this typename
-    // if (tmp != a.end()) {
-        // return tmp;
-    // }
-    // throw ex::Not(); // changed later to a return 
     return std::find(a.begin(), a.end(), b);
 }
 
 template <typename T>
 typename T::const_iterator easyfind(const T &a, int b)
 {
-    // typename T::iterator tmp = std::find(a.begin(), a.end(), b); //search more about this typename
-    // if (tmp != a.end()) {
-        // return tmp;
-    // }
-    // throw ex::Not(); // changed later to a return 
     return std::find(a.begin(), a.end(), b);
 }
-// template <typename T>
-// typename T::const_iterator easyfind(const T &a, int b)
-// {
-//     typename T::const_iterator tmp = std::find(a.begin(), a.end(), b); //search more about this typename
-//     if (tmp != a.end()) {
-//         return tmp;
-//     }
-//     // throw ex::Not(); // changed later to a return 
-//     return a.end();
-// }
+
 #endif
 
 

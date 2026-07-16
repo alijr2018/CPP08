@@ -133,3 +133,23 @@ If you want, I can also explain:
 iterator invalidation tricks for exams
 time complexity table (very common interview question)
 or differences between C++98 vs modern C++11 containers
+
+
+
+A container is an object that stores other objects.
+
+Different containers solve different problems.
+
+There is no "best" container.
+
+An iterator is an object that points to an element inside a container.
+
+Iterator categories (C++98)
+
+Different containers provide different kinds of iterators.
+
+Forward iterators: move only with ++.
+Bidirectional iterators: move with ++ and --.
+Random-access iterators: support +, -, indexing-like jumps, and comparisons.
+
+Algorithms are generic functions.

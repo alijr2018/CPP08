@@ -1,0 +1,630 @@
+
+Get responses tailored to you
+
+Log in to get answers based on saved chats, plus create images and upload files.
+
+
+Log in
+do you now cpp 98 of 42 school
+
+Yes, I know C++98 and the 42 School C++ modules (CPP00–CPP09).
+
+The 42 C++ curriculum is based mainly on C++98, meaning you avoid newer features like:
+
+auto
+
+range-based for
+
+lambdas
+
+smart pointers (std::unique_ptr, std::shared_ptr)
+
+nullptr
+
+std::thread
+
+most C++11/14/17 features
+
+Typical 42 CPP subjects include:
+
+CPP00: Classes, constructors, destructors, member functions, std::cout, namespaces, initialization lists
+
+CPP01: Memory allocation, references, pointers, new/delete, file streams
+
+CPP02: Orthodox Canonical Form, operator overloading, fixed-point numbers
+
+CPP03: Inheritance
+
+CPP04: Abstract classes, interfaces, virtual functions
+
+CPP05: Exceptions, repetition, try/catch
+
+CPP06: C++ casts (static_cast, dynamic_cast, reinterpret_cast, const_cast)
+
+CPP07: Templates
+
+CPP08: STL containers, iterators, algorithms
+
+CPP09: Advanced STL (containers like map, stack, vector, parsing exercises)
+
+I can help with:
+
+explaining concepts in the 42 style
+
+reviewing your code
+
+debugging compilation errors
+
+checking if your solution respects C++98 rules
+
+explaining subjects like Orthodox Canonical Form or virtual inheritance
+
+preparing for defense/evaluation questions
+
+If you have a specific CPP module or exercise, send it over.
+
+
+ask me about cpp08 all the question and how it woek
+
+Sure. I’ll quiz you like a 42 CPP08 evaluation/defense. I’ll ask questions from basic to advanced. Answer them one by one, and I’ll correct or explain after each answer.
+
+CPP08 — STL, Containers, Iterators, Algorithms
+Part 1: General STL
+Q1. What does STL stand for, and what problem does it solve in C++?
+
+Q2. What are the three main components of the STL?
+
+Q3. What is the difference between a container, an iterator, and an algorithm?
+
+Q4. Why does 42 CPP08 use C++98 STL instead of newer C++ features?
+
+Part 2: Containers
+Q5. What is the difference between std::vector and std::list?
+
+Q6. When would you choose a vector over a list?
+
+Q7. How does a vector store its elements in memory?
+
+Q8. What happens internally when a vector runs out of capacity?
+
+Q9. What is the difference between size() and capacity() in a vector?
+
+Q10. What is the time complexity of:
+
+Accessing vector[i]
+
+Inserting at the end of a vector
+
+Inserting at the beginning of a vector
+
+Part 3: Iterators
+Q11. What is an iterator?
+
+Q12. Why do we use iterators instead of accessing containers directly?
+
+Q13. What does this mean?
+
+std::vector<int>::iterator it;
+Q14. What is the difference between:
+
+iterator
+const_iterator
+Q15. Explain:
+
+it++
+and:
+
+++it
+Q16. What happens if you dereference an iterator that is equal to end()?
+
+Example:
+
+std::vector<int>::iterator it = v.end();
+std::cout << *it;
+Part 4: Algorithms
+Q17. What is std::find used for?
+
+Example:
+
+std::find(v.begin(), v.end(), value);
+Explain each parameter.
+
+Q18. What does std::equal do?
+
+Q19. What does std::for_each do?
+
+Q20. Why are STL algorithms usually written to work with iterators instead of containers?
+
+Part 5: EasyFind (42 Exercise)
+Q21. In the easyfind exercise, why do we pass the container by reference?
+
+Example:
+
+template <typename T>
+int easyfind(T& container, int value);
+Why not:
+
+template <typename T>
+int easyfind(T container, int value);
+?
+
+Q22. What happens if the value is not found?
+
+Q23. Why can std::find work with many different containers?
+
+Part 6: Span Exercise
+Q24. Explain the purpose of the Span class.
+
+Q25. Why does Span need to store numbers?
+
+Q26. Difference between:
+
+addNumber()
+and:
+
+addNumbers(iterator begin, iterator end)
+Q27. How do you calculate the shortest span?
+
+Q28. How do you calculate the longest span?
+
+Q29. Why do we usually sort the numbers before finding the shortest span?
+
+Part 7: MutantStack Exercise
+Q30. Why does std::stack not provide iterators?
+
+Q31. How does MutantStack add iterator support?
+
+Q32. Why do we inherit from std::stack?
+
+Q33. What is the difference between:
+
+std::stack<int>
+and:
+
+MutantStack<int>
+?
+
+Part 8: Defense Questions
+Q34. What is the difference between:
+
+vector
+
+deque
+
+list
+
+map
+
+stack
+
+?
+
+Q35. What happens if you erase an element from a vector? Are iterators still valid?
+
+Q36. Why are templates used in CPP08?
+
+Q37. Explain this:
+
+template <typename T>
+Q38. What happens at compile time when using templates?
+
+Q39. Why is STL considered generic programming?
+
+Q40. What are the most common mistakes students make in CPP08?
+
+Start with Q1. Answer as if you are in a 42 defense, and I’ll tell you if it’s correct.
+
+
+Part 1:
+Q1: standard template library, how to hold the data.
+Q2: standard container template and algorithm
+Q3: container is and object that hold and object, iterator is and object that iterate inside of container, algorithm is the algo used inside the container for a purpose of sorting or inserting or moving diff from container to other
+Q4: to now how contianer work
+Part2:
+Q5:both of them are container but both of them have diff way of storing data and accessing it .
+Q6: depend on the usage
+Q7: idk
+Q8: idk
+Q9:size is the number of element in the container and capacity is how the contaner could hold
+Q10:idk
+PART 3:
+Q11: is an object behave like pointer , it could loop inside the container and access the data inside it , idk if he could change it
+Q12: because each container has it's way of holding the data , that's why we create the iterator to each one
+Q13: an object of iterator of an vector of type int:
+Q14: like the diff between reference and const reference
+Q15: preincriment and postincriment
+Q16: segfault because end() is out of our vector,the iterator now itself that he's out of the container
+Q17: to search our container for our value
+Q18: idk
+Q19:idk
+Q20: idk
+Q21: to not make a copy of it 
+Q22: throw an error or return something that identify as error
+Q23: because it does
+Q24: idk
+Q25:to search in them
+Q26: one add the nbr to the class and oother idk
+
+This is about what I'd expect from someone who has used the STL but hasn't fully learned how it works internally. In a 42 defense, some of your answers would pass, while others would likely lead to follow-up questions. I'll go through them.
+
+Part 1
+Q1. What is STL?
+Your answer:
+
+Standard Template Library, how to hold the data.
+
+Score: 6/10
+
+A better answer:
+
+STL (Standard Template Library) is a library in C++ that provides generic containers, iterators, algorithms, and function objects. It allows us to write reusable and efficient code without implementing common data structures ourselves.
+
+Q2. Three main components?
+Your answer:
+
+standard container template and algorithm
+
+Score: 7/10
+
+You forgot iterators.
+
+Correct:
+
+Containers
+
+Iterators
+
+Algorithms
+
+(Some people also mention allocators and function objects, but the first three are what 42 expects.)
+
+Q3. Difference?
+Your answer:
+
+container is object that hold object, iterator iterate, algorithm sort...
+
+Score: 8/10
+
+That's mostly correct.
+
+A cleaner explanation:
+
+Container → stores data.
+
+Iterator → points to elements inside a container.
+
+Algorithm → performs operations using iterators (find, sort, copy, count...).
+
+Q4. Why C++98?
+Your answer:
+
+to know how container work
+
+Score: 5/10
+
+A better answer:
+
+Because the project teaches the fundamentals of C++ and the STL without relying on newer C++11+ features.
+
+Part 2
+Q5. Vector vs List
+Your answer:
+
+different way of storing data
+
+Score: 6/10
+
+The evaluator will almost certainly ask:
+
+"How?"
+
+You should answer:
+
+Vector
+
+contiguous memory
+
+fast random access (v[i])
+
+slow insertion in the middle
+
+List
+
+doubly linked list
+
+no random access
+
+fast insertion/removal anywhere if you already have an iterator
+
+Q6. When choose vector?
+Your answer:
+
+depends
+
+Score: 4/10
+
+They want something like:
+
+I choose a vector when I need fast indexing and good cache performance. It is the default container unless frequent insertions/removals in the middle are required.
+
+Q7. How does vector store elements?
+You answered "idk"
+
+Expected:
+
+In one contiguous block of memory, like an array.
+
+This is one of the most common defense questions.
+
+Q8. What happens when capacity is full?
+Expected:
+
+allocate larger memory
+
+copy existing elements
+
+destroy old memory
+
+continue inserting
+
+Q9. size vs capacity
+Your answer:
+
+size = number of elements
+
+capacity = how much it can hold
+
+10/10
+
+Perfect.
+
+Q10. Complexity
+Expected:
+
+Operation	Complexity
+vector[i]	O(1)
+push_back	O(1) amortized
+insert at beginning	O(n)
+These complexities are asked often.
+
+Part 3
+Q11. Iterator
+Your answer:
+
+behaves like pointer
+
+10/10
+
+Excellent.
+
+Q12. Why iterators?
+Your answer:
+
+because each container stores differently
+
+9/10
+
+Very good.
+
+You could add:
+
+Algorithms don't need to know the container type. They only need iterators.
+
+Q13.
+std::vector<int>::iterator it;
+Your answer:
+
+object iterator of vector<int>
+
+10/10
+
+Exactly.
+
+Q14.
+iterator vs const_iterator
+
+Your answer:
+
+like reference and const reference
+
+8/10
+
+Better:
+
+iterator
+
+can modify elements
+
+const_iterator
+
+cannot modify elements
+
+Q15.
+pre/post increment
+
+8/10
+
+Good.
+
+Evaluator may ask:
+
+Which is faster?
+
+Answer:
+
+++it because it doesn't create a temporary copy.
+
+Q16.
+Dereference end()
+
+Your answer:
+
+segfault
+
+6/10
+
+More correct:
+
+Undefined behavior.
+
+Sometimes it crashes.
+
+Sometimes it prints garbage.
+
+Sometimes nothing obvious happens.
+
+You should never dereference end().
+
+Part 4
+Q17.
+find()
+
+Your answer:
+
+search value
+
+7/10
+
+Need to explain parameters.
+
+std::find(begin, end, value);
+begin → where search starts
+
+end → where search stops
+
+value → value to find
+
+Return:
+
+iterator to found element
+
+or
+
+end() if not found
+
+Q18.
+equal()
+
+Expected:
+
+Compares two ranges.
+
+Q19.
+for_each()
+
+Expected:
+
+Applies a function to every element.
+
+Q20.
+Why algorithms use iterators?
+
+Expected:
+
+Because they become generic.
+
+The same algorithm works for vector, list, deque...
+
+EasyFind
+Q21.
+Pass by reference?
+
+Your answer:
+
+avoid copy
+
+10/10
+
+Exactly.
+
+Q22.
+Not found?
+
+Your answer:
+
+throw error
+
+8/10
+
+Depends on your implementation.
+
+Most students throw an exception.
+
+Some return end().
+
+Q23.
+Why std::find works everywhere?
+
+Your answer:
+
+because it does 😂
+
+This answer won't satisfy an evaluator.
+
+Correct:
+
+Because it only requires iterators. Every STL container provides iterators.
+
+Span
+Q24.
+Purpose
+
+Expected:
+
+Store integers and compute shortest/longest span.
+
+Q25.
+Why store numbers?
+
+Expected:
+
+Because spans are differences between stored numbers.
+
+Q26.
+Difference?
+
+addNumber()
+Adds one number.
+
+addNumbers(begin,end)
+Adds an entire range using iterators.
+
+Overall
+If this were a defense I'd probably give:
+
+Understanding: 7/10
+
+You understand:
+
+iterators
+
+references
+
+templates
+
+containers
+
+You need to study:
+
+vector internals
+
+complexities
+
+algorithms
+
+Span
+
+MutantStack
+
+Those are exactly where evaluators tend to focus.
+
+I can also ask you the 20 hardest CPP08 defense questions—the kind of questions evaluators use when they want to go beyond the basics.
+
+Get smarter responses, upload files and images, and more.
+
+Log in
+
+Sign up for free
+
+
+Voice
