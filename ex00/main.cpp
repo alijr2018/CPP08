@@ -12,10 +12,13 @@ int main()
     it = easyfind(v, 2);
 
     if (it != v.end())
+    {
         std::cout << *it << std::endl;
+    }
     else
     {
-        std::cout << "Error Not found\n";
+        std::cout << "Error Not found" << std::endl;
+        return 1;
     }
 
     return 0;
