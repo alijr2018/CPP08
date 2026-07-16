@@ -5,6 +5,8 @@
 #include <stack>
 #include <deque>
 #include <iostream>
+#include <list>
+#include <ctime>  
 
 template <typename T>
 class MutantStack: public std::stack<T> 
