@@ -4,10 +4,10 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <stdio.h>
-#include <unistd.h>
 #include <climits>
-
+#include <cstdlib>
+#include <stdexcept>
+#include <iterator>
 
 class Span
 {
@@ -20,44 +20,18 @@ class Span
         ~Span();
         Span(const Span &i);
         Span& operator=(const Span &j);
-        void  addNumber(unsigned int k)
-        {
-            a.push_back(k);
-        }
-        unsigned int longestSpan()
-        {
-            std::sort(a.begin(), a.end());
-            long count = 0;
-            for (size_t i = 0; i <= a.size();i++)
-            {
-                for (size_t j = i+1; j <= a.size() -1; j++)
-                {
-                    if (a[j] - a[i] > count)
-                        count = a[j] - a[i];
-                }
-            }
-            return count;
-
-        }
-        unsigned int shortestSpan()
-        {
-            std::sort(a.begin(), a.end());
-            unsigned int count = 0;
-            unsigned int tmp = UINT_MAX;
-
-            for (size_t i = 0; i <= a.size();i++)
-            {
-                for (size_t j = i+1; j <= a.size() -1; j++)
-                {
-                    count = a[j] - a[i];
-
-                    if (count < tmp)
-                        tmp = count;
-                }
-            }
-            return tmp;
-        };
-
+        void  addNumber(unsigned int k);
+        unsigned int longestSpan();
+        unsigned int shortestSpan();
+        template <typename T>
+        void addRange(T i, T j);
 };
 
+template <typename T>
+void Span::addRange(T i, T j)
+{
+    if (a.size() + std::distance(i, j) > n)
+        throw "Not enough capacity for this range";
+    a.insert(a.end(), i, j);
+}
 #endif
