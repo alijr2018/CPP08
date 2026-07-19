@@ -33,7 +33,7 @@ int main()
         std::cout << *it << std::endl;
         ++it;
     }
-    // -----
+    
     std::list<int> lst;
     lst.push_back(5);
     lst.push_back(17);
